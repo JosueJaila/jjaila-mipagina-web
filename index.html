@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300&family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
     <script src="https://kit.fontawesome.com/51cffd4e5c.js" crossorigin="anonymous"></script>
     <title>Josué David Jaila Kankeri Desarrollador Front-end</title>
 </head>
-<body>
-    <nav class="navbar">
+<body style="height: 100%">
+    <nav class="navbar" data-sr-id="0" style="visibility: visible; opacity: 1; transition: background 0.3s ease 0s, opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0.25s; background: transparent;">
         <div class="container">
             <div class="navbar__logo">
                 <p class="navbar__title">
@@ -18,19 +22,20 @@
             <div class="navbar__menu">
                 <i class="fas fa-bars" aria-hidden="true"></i>
             </div>
-            <ul>
-                <li><a href="#home">Inicio</a></li>
-                <li><a href="#about">Sobre</a></li>
-                <li><a href="#services">Servicios</a></li>
-                <li><a href="#portfolio">Portafolio</a></li>
-                <li><a href="#contact">Contacto</a></li>
+            <ul class="navbar__links">
+                <li class="navbar__link active" data-ref="home"><a href="#home">Inicio</a></li>
+                <li class="navbar__link" data-ref="about"><a href="#about">Sobre</a></li>
+                <li class="navbar__link" data-ref="services"><a href="#services">Servicios</a></li>
+                <li class="navbar__link" data-ref="portfolio"><a href="#portfolio">Portafolio</a></li>
+                <li class="navbar__link" data-ref="contact"><a href="#contact" data-ref="contact">Contacto</a></li>
             </ul>
         </div>
     </nav>
     <section id="home" class="home">
         <div class="home__background"></div>
         <picture>
-            <img class="home__profile" src="res/FotoDNI2.jpg" alt="foto del desarrollador">
+            <source type="image/jpeg" srcset="res/foto.jpg">
+            <img class="home__profile" alt="foto del desarrollador">
         </picture>
         <div class="home__description">
             <span class="home__title--primary">Hola!</span>
@@ -54,11 +59,21 @@
                 </div>
                 <div class="about__skills">
                     <div class="skill__title"><h2>Mis habilidades</h2></div>
-                    <div class="skill__item"><img src="res/sql.png" alt="logo de MySql">MySql</div>
-                    <div class="skill__item"><img src="res/java.png" alt="logo de JavaScript">JavaScript</div>
-                    <div class="skill__item"><img src="res/html.png" alt="logo de HTML5">HTML5</div>
-                    <div class="skill__item"><img src="res/css.png" alt="logo de CSS">CSS</div>
-                    <div class="skill__item"><img src="res/git.png" alt="logo de GIT">GIT</div>
+                    
+                    <div class="skill__item"><img src="res/sql.png" alt="logo de MySql"><div class="skill__name">MySql</div>
+                    </div>
+
+                    <div class="skill__item"><img src="res/java.png" alt="logo de JavaScript"><div class="skill__name">JavaScript</div>
+                    </div>
+
+                    <div class="skill__item"><img src="res/html.png" alt="logo de HTML5"><div class="skill__name">HTML5</div>
+                    </div>
+
+                    <div class="skill__item"><img src="res/css.png" alt="logo de CSS"><div class="skill__name">CSS</div>
+                    </div>
+
+                    <div class="skill__item"><img src="res/git.png" alt="logo de GIT"><div class="skill__name">GIT</div>
+                    </div>
                 </div>
             </div>
         </div>
